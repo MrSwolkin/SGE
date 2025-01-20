@@ -1,0 +1,21 @@
+
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="container mt-4">
+    <h3 class="display-6">Detalhes do produto</h3>
+    <div class="card col-md-9">
+        <div class="card-body">
+            <p class="card-text"><strong>Nome:</strong></p>
+            <h3 class="card-title">{{object.product}}</h3>
+            <p class="card-text"><strong>Descrição:</strong></p>
+            <p class="card-text">{{object.description}}</p>
+            <p class="card-text"><strong>Cadastrado em: </strong><br><i>{{object.create_at}}</i></p>
+            <p class="card-text"><strong>Última atualização: </strong><br><i>{{object.update_at}}</i></p>
+        </div>
+    </div>
+    <a href="{% url 'outflow_list' %}" class="btn btn-secondary mt-4">Voltar para lista de saídas</a>
+</div>
+
+{% endblock %}
